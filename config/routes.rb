@@ -1,6 +1,13 @@
 Rails.application.routes.draw do
+  resources :doses
+  resources :cocktails
+  resources :ingredients
   resources :cocktails
   resources :articles
+
+  root 'cocktails#index'
+  end #added on 2015 09 24
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -55,4 +62,4 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-end
+
